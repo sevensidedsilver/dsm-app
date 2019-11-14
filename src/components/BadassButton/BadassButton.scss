@@ -1,0 +1,20 @@
+.BadassButton {
+    box-sizing: border-box;
+
+    button {
+        height: 60px;
+        width: 300px;
+        background: #6f2c6f;
+        color: white;
+        font-size: 1em;
+        transition: ease .5s;
+        cursor: pointer;
+        &:hover {
+            background: #deafde;
+            color: #484848;
+            transition: all ease-in-out .4s;
+            letter-spacing: 1px;
+        }
+    }
+
+}
