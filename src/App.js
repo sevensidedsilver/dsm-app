@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/css/App.css';
 import BadassButton from './components/BadassButton/BadassButton';
 
 function App() {
