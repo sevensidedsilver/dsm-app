@@ -19,14 +19,12 @@ class BadassButton extends Component {
 
   render(){
     return (
-      <div className="BadassButton">
         <button
           className={this.classCaller(this.props.level)} 
           disabled={this.props.disabled}
           >
             {this.props.txt}
           </button>
-      </div>
     )
   }
 }
