@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { BadassButton } from './BadassButton'
-import './BadassButton.scss';
+import '../../styles/scss/BadassButton.scss';
 
 export default {
     title: 'Button',
