@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import './BadassButton.scss';
 
 class BadassButton extends Component {
@@ -9,7 +8,7 @@ class BadassButton extends Component {
   render(){
     return (
       <div className="BadassButton">
-        <button>{this.props.txt}</button>
+        <button disabled={this.props.disabled}>{this.props.txt}</button>
       </div>
     )
   }

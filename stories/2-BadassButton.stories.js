@@ -9,3 +9,7 @@ export default {
 export const badass = () => (
     <BadassButton txt="NEAT"></BadassButton>
 )
+
+export const disabled = () => (
+    <BadassButton txt="OOF" disabled={true}></BadassButton>
+)

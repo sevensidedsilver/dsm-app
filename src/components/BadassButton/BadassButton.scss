@@ -15,6 +15,16 @@
             transition: all ease-in-out .4s;
             letter-spacing: 1px;
         }
+        &:disabled {
+            background: grey;
+            color: white;
+            cursor: default;
+            &:hover {
+                letter-spacing: inherit;
+            }
+        }
     }
+
+    
 
 }
