@@ -13,3 +13,7 @@ export const badass = () => (
 export const disabled = () => (
     <BadassButton txt="OOF" disabled={true}></BadassButton>
 )
+
+export const secondary = () => (
+    <BadassButton txt="Dispatch Green" level="2"></BadassButton>
+)

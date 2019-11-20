@@ -24,6 +24,13 @@
             }
         }
     }
+    button.secondary {
+        background: #2c6f52;
+        &:hover {
+            background: #235841;
+            color: #eeffdd;
+        }
+    }
 
     
 
