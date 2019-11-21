@@ -17,7 +17,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "sass --watch src/styles/scss:src/styles/css | start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "eslintConfig": {
     "extends": "react-app"

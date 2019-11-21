@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './styles/css/App.css';
 import BadassButton from './components/BadassButton/BadassButton';
+import BlueButton from './components/BlueButton/BlueButton'
 
 function App() {
   return (
