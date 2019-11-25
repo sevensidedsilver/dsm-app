@@ -9,11 +9,11 @@ storiesOf('BlueButton', module)
     .add(
         'with emoji',
         () => (
-            <BlueButton>😀 😎 👍 💯</BlueButton>
+            <BlueButton txt="dsm button"></BlueButton>
         ),
         {
             'in-dsm': {
-                id: '5dd6d834a576d87f89e95143'
+                id: '5dc45ba8968fb6328dc2f712'
             }
         }
     )
