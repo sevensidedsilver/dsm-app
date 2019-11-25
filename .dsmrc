@@ -3,5 +3,5 @@
   "dsmHost": "fortwest.invisionapp.com",
   "organization": "fort-west",
   "outputDir": ".dsm",
-  "storyPath": "src/**/*.stories.js"
+  "storyPath": "./stories/**/*.stories.js"
 }

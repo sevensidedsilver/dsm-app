@@ -1,0 +1,329 @@
+
+---------------------------------------------------      DSM Log Start      ---------------------------------------------------
+Error message: A story must have 1 explicit return statement (detected in story "basic" of Badass Button) 
+  
+Created Date: 11/25/2019, 10:20:37 AM
+Story file path: ./stories/2-BadassButton.stories.js
+Component file path: Not found in "in-dsm"
+
+###  FILE: package.json
+  
+{
+  "pkg": {
+    "name": "dsm-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@invisionapp/dsm-storybook": "0.0.119",
+      "@storybook/addon-options": "^5.2.6",
+      "cli-react": "^2.1.0",
+      "node-sass": "^4.13.0",
+      "react": "^16.11.0",
+      "react-dom": "^16.11.0",
+      "react-scripts": "3.2.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "storybook": "sass --watch src/styles/scss:src/styles/css | start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "dsm-storybook:publish": "dsm-storybook publish",
+      "dsm-storybook:preview": "dsm-storybook preview"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@babel/core": "^7.7.2",
+      "@storybook/addon-actions": "^5.2.6",
+      "@storybook/addon-knobs": "^5.2.6",
+      "@storybook/addon-links": "^5.2.6",
+      "@storybook/addons": "^5.2.6",
+      "@storybook/react": "^5.2.6",
+      "babel-loader": "^8.0.6"
+    },
+    "readme": "ERROR: No README data found!",
+    "_id": "dsm-app@0.1.0"
+  },
+  "path": "/Users/seanruffolo/dev/dsm-app/package.json"
+}
+
+###  FILE: '.dsmrc'
+  
+{
+  "dsmHost": "fortwest.invisionapp.com",
+  "organization": "fort-west",
+  "outputDir": ".dsm",
+  "storyPath": "./stories/**/*.stories.js"
+}
+
+###  Story metadata
+  
+{
+  "externalComponentId": "5dd6d834a576d87f89e95143",
+  "kind": "Badass Button",
+  "name": "basic",
+  "dsmInfo": {
+    "id": "5dd6d834a576d87f89e95143"
+  }
+}
+
+###  Story source code
+  
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, select, boolean, object } from '@storybook/addon-knobs';
+
+import BadassButton from '../src/components/BadassButton/BadassButton';
+
+// export default {
+//     title: 'BadassButton'
+// }
+
+export const badass = () => (
+    <BadassButton txt="NEAT"></BadassButton>
+)
+
+export const disabled = () => (
+    <BadassButton txt="OOF" disabled={true}></BadassButton>
+)
+
+export const secondary = () => (
+    <BadassButton txt="Dispatch Green" level="2"></BadassButton>
+)
+
+storiesOf('Badass Button', module)
+    .add(
+        'basic',
+        () => (
+            badass()
+        ),
+        {
+            'in-dsm': {
+                id: '5dd6d834a576d87f89e95143'
+            }
+        }
+    )
+    .add(
+        'disabled',
+        () => (
+            disabled()
+        )
+    )
+    .add('secondary', ()=>(secondary()))
+
+####  STORYBOOK CONFIG /Users/seanruffolo/dev/dsm-app/.storybook/*
+   
+
+###  FILE: /Users/seanruffolo/dev/dsm-app/.storybook/addons.js
+  
+import '@storybook/addon-actions/register';
+import '@storybook/addon-links/register';
+import '@storybook/addon-knobs/register';
+
+import { registerDsm } from '@invisionapp/dsm-storybook/register';
+registerDsm(process.env.STORYBOOK_DSM);
+
+,
+###  FILE: /Users/seanruffolo/dev/dsm-app/.storybook/config.js
+  
+
+// automatically import all files ending in *.stories.js
+// configure(require.context('../stories', true, /\.stories\.js$/), module);
+
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { initDsm } from '@invisionapp/dsm-storybook';
+
+// automatically import all files ending in *.stories.js
+const req = require.context('../stories', true, /\.stories\.js$/);
+function loadStories() {
+    req.keys().forEach((filename) => req(filename));
+}
+
+//Init Dsm
+initDsm({
+    addDecorator,
+    addParameters,
+    callback: () => configure(loadStories, require.context('../stories', true, /\.stories\.js$/), module)
+});
+ 
+---------------------------------------------------      DSM Log End      -----------------------------------------------------
+
+---------------------------------------------------      DSM Log Start      ---------------------------------------------------
+Error message: A story must have 1 explicit return statement (detected in story "basic" of Badass Button) 
+  
+Created Date: 11/25/2019, 10:20:37 AM
+Story file path: ./stories/2-BadassButton.stories.js
+Component file path: Not found in "in-dsm"
+
+###  FILE: package.json
+  
+{
+  "pkg": {
+    "name": "dsm-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@invisionapp/dsm-storybook": "0.0.119",
+      "@storybook/addon-options": "^5.2.6",
+      "cli-react": "^2.1.0",
+      "node-sass": "^4.13.0",
+      "react": "^16.11.0",
+      "react-dom": "^16.11.0",
+      "react-scripts": "3.2.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "storybook": "sass --watch src/styles/scss:src/styles/css | start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "dsm-storybook:publish": "dsm-storybook publish",
+      "dsm-storybook:preview": "dsm-storybook preview"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@babel/core": "^7.7.2",
+      "@storybook/addon-actions": "^5.2.6",
+      "@storybook/addon-knobs": "^5.2.6",
+      "@storybook/addon-links": "^5.2.6",
+      "@storybook/addons": "^5.2.6",
+      "@storybook/react": "^5.2.6",
+      "babel-loader": "^8.0.6"
+    },
+    "readme": "ERROR: No README data found!",
+    "_id": "dsm-app@0.1.0"
+  },
+  "path": "/Users/seanruffolo/dev/dsm-app/package.json"
+}
+
+###  FILE: '.dsmrc'
+  
+{
+  "dsmHost": "fortwest.invisionapp.com",
+  "organization": "fort-west",
+  "outputDir": ".dsm",
+  "storyPath": "./stories/**/*.stories.js"
+}
+
+###  Story metadata
+  
+{
+  "externalComponentId": "5dd6d834a576d87f89e95143",
+  "kind": "Badass Button",
+  "name": "basic",
+  "dsmInfo": {
+    "id": "5dd6d834a576d87f89e95143"
+  },
+  "frameworkMetadata": null
+}
+
+###  Story source code
+  
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, select, boolean, object } from '@storybook/addon-knobs';
+
+import BadassButton from '../src/components/BadassButton/BadassButton';
+
+// export default {
+//     title: 'BadassButton'
+// }
+
+export const badass = () => (
+    <BadassButton txt="NEAT"></BadassButton>
+)
+
+export const disabled = () => (
+    <BadassButton txt="OOF" disabled={true}></BadassButton>
+)
+
+export const secondary = () => (
+    <BadassButton txt="Dispatch Green" level="2"></BadassButton>
+)
+
+storiesOf('Badass Button', module)
+    .add(
+        'basic',
+        () => (
+            badass()
+        ),
+        {
+            'in-dsm': {
+                id: '5dd6d834a576d87f89e95143'
+            }
+        }
+    )
+    .add(
+        'disabled',
+        () => (
+            disabled()
+        )
+    )
+    .add('secondary', ()=>(secondary()))
+
+####  STORYBOOK CONFIG /Users/seanruffolo/dev/dsm-app/.storybook/*
+   
+
+###  FILE: /Users/seanruffolo/dev/dsm-app/.storybook/addons.js
+  
+import '@storybook/addon-actions/register';
+import '@storybook/addon-links/register';
+import '@storybook/addon-knobs/register';
+
+import { registerDsm } from '@invisionapp/dsm-storybook/register';
+registerDsm(process.env.STORYBOOK_DSM);
+
+,
+###  FILE: /Users/seanruffolo/dev/dsm-app/.storybook/config.js
+  
+
+// automatically import all files ending in *.stories.js
+// configure(require.context('../stories', true, /\.stories\.js$/), module);
+
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { initDsm } from '@invisionapp/dsm-storybook';
+
+// automatically import all files ending in *.stories.js
+const req = require.context('../stories', true, /\.stories\.js$/);
+function loadStories() {
+    req.keys().forEach((filename) => req(filename));
+}
+
+//Init Dsm
+initDsm({
+    addDecorator,
+    addParameters,
+    callback: () => configure(loadStories, require.context('../stories', true, /\.stories\.js$/), module)
+});
+ 
+---------------------------------------------------      DSM Log End      -----------------------------------------------------

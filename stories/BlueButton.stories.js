@@ -16,7 +16,13 @@ storiesOf('BlueButton', module)
                 id: '5dd6d834a576d87f89e95143'
             }
         }
-    );
+    )
+    .add(
+        'basic text',
+        () => (
+            <BlueButton txt="buttontxt"/>
+        )
+    )
 
 export default {
     title: 'BlueButton'
