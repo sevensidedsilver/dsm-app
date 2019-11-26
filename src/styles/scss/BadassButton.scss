@@ -10,9 +10,8 @@
         cursor: pointer;
         &:hover {
             background: #deafde;
-            color: #484848;
+            
             transition: all ease-in-out .4s;
-            letter-spacing: 1px;
         }
         &:disabled {
             background: grey;
@@ -32,4 +31,13 @@
     }
 
     
-
+.alright {
+    letter-spacing: 1px;
+}
+.wide {
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    transition: ease .2s;
+    color: #484848;
+    
+}
