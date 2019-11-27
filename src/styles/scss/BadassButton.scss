@@ -8,10 +8,9 @@
         font-size: 1em;
         transition: ease .5s;
         cursor: pointer;
+        transition: all ease .2s;
         &:hover {
             background: #deafde;
-            
-            transition: all ease-in-out .4s;
         }
         &:disabled {
             background: grey;
@@ -37,7 +36,8 @@
 .wide {
     letter-spacing: 3px;
     font-size: 1.2em;
-    transition: ease .2s;
+    transition: all ease .2s;
     color: #484848;
-    
+    text-shadow: rgba(0, 0, 0, 0.55) 2px 1px 3px;
+    background: transparent;
 }

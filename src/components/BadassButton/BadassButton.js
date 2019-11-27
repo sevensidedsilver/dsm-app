@@ -4,6 +4,7 @@ import { updateExpression } from 'babel-types';
 
 class BadassButton extends Component {
   constructor(props){
+    console.log('constructed')
     super(props);
     this.state = ({
       spans: this.spans
@@ -52,24 +53,33 @@ class BadassButton extends Component {
     }, 70)
 
   }
-  handleLeave = () => {
-    
-    
-    setTimeout(() => {
 
-      if (this.i < this.state.spans.length) {
+
+
+  handleLeave = () => {
+
+    setTimeout(() => {
+      this.i--;
+      if (this.i > -2) {
         
-        this.i++;
+        console.log(this.i)
+        if (this.i < 0) {
+          return;
+        }
         this.setState((state) => ({
           spans: this.state.spans.map((item, index) => {
-
-              return (<span className={index}>{this.split[index]}</span>)
+            if (index !== this.i) {
+              return this.state.spans[index]
+            } else {
+              return (<span className={this.i}>{this.split[this.i]}</span>)
+            }
+              
             
           })
         }))
         this.handleLeave();
       } 
-    }, 100)
+    }, 60)
 
   }
 
@@ -78,9 +88,8 @@ class BadassButton extends Component {
 
 
   render(){
-
-
     return (
+
         <button
           className={this.classCaller(this.props.level)} 
           disabled={this.props.disabled}
@@ -90,6 +99,7 @@ class BadassButton extends Component {
             {this.state.spans}
           </button>
     )
+    
   }
 }
 BadassButton.propTypes = {
