@@ -9,10 +9,8 @@ button {
   cursor: pointer; }
   button:hover {
     background: #deafde;
-    color: #484848;
     -webkit-transition: all ease-in-out .4s;
-    transition: all ease-in-out .4s;
-    letter-spacing: 1px; }
+    transition: all ease-in-out .4s; }
   button:disabled {
     background: grey;
     color: white;
@@ -25,6 +23,16 @@ button.secondary {
   button.secondary:hover {
     background: #235841;
     color: #eeffdd; }
+
+.alright {
+  letter-spacing: 1px; }
+
+.wide {
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  -webkit-transition: ease .2s;
+  transition: ease .2s;
+  color: #484848; }
 
 button {
   background: blue;

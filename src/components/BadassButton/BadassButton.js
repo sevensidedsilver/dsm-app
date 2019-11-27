@@ -49,12 +49,12 @@ class BadassButton extends Component {
         }))
         this.handleHover();
       }                       
-    }, 50)
+    }, 70)
 
   }
   handleLeave = () => {
     
-
+    
     setTimeout(() => {
 
       if (this.i < this.state.spans.length) {
@@ -68,9 +68,7 @@ class BadassButton extends Component {
           })
         }))
         this.handleLeave();
-      } else {
-        this.i = -1;
-      }
+      } 
     }, 100)
 
   }
