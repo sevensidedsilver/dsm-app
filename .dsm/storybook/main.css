@@ -1,16 +1,18 @@
 button {
+  -webkit-transition: all ease .9s;
+  transition: all ease .9s;
   height: 60px;
   width: 300px;
   background: #6f2c6f;
   color: white;
   font-size: 1em;
-  -webkit-transition: ease .5s;
-  transition: ease .5s;
-  cursor: pointer; }
+  cursor: pointer;
+  color: rgba(100, 100, 100, 0.55);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
   button:hover {
-    background: #deafde;
-    -webkit-transition: all ease-in-out .4s;
-    transition: all ease-in-out .4s; }
+    -webkit-transition: all ease .6s;
+    transition: all ease .6s;
+    background: #deafde; }
   button:disabled {
     background: grey;
     color: white;
@@ -30,9 +32,12 @@ button.secondary {
 .wide {
   letter-spacing: 3px;
   font-size: 1.2em;
-  -webkit-transition: ease .2s;
-  transition: ease .2s;
-  color: #484848; }
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  color: #484848;
+  text-shadow: rgba(0, 0, 0, 0.55) 2px 3px 6px;
+  background: transparent;
+  text-shadow: inherit; }
 
 button {
   background: blue;

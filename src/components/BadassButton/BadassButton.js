@@ -50,7 +50,7 @@ class BadassButton extends Component {
         }))
         this.handleHover();
       }                       
-    }, 70)
+    }, 30)
 
   }
 

@@ -3,13 +3,14 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, select, boolean, object } from '@storybook/addon-knobs';
 
 import BlueButton from '../src/components/BlueButton/BlueButton';
+import BadassButton from '../src/components/BadassButton/BadassButton';
 
 
 storiesOf('BlueButton', module)
     .add(
         'with emoji',
         () => (
-            <BlueButton txt="dsm button"></BlueButton>
+            <BadassButton txt="dsm button"></BadassButton>
         ),
         {
             'in-dsm': {
