@@ -5,9 +5,9 @@ button {
   color: white;
   font-size: 1em;
   cursor: pointer;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all ease 1.6s;
-  transition: all ease 1.6s; }
+  transition: all ease 1.6s;
+  border: none; }
   button span {
     -webkit-transition: all ease .4s;
     transition: all ease .4s; }
@@ -38,8 +38,7 @@ button.secondary {
   transition: all ease .4s;
   color: #484848;
   text-shadow: rgba(0, 0, 0, 0.55) 2px 3px 6px;
-  background: transparent;
-  text-shadow: inherit; }
+  background: transparent; }
 
 button {
   background: blue;

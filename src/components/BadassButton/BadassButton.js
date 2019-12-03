@@ -53,34 +53,64 @@ class BadassButton extends Component {
     }, 30)
 
   }
+  handleHoverReverse = () => {
+    this.reset();
+    this.handleHover();
+  }
 
 
 
   handleLeave = () => {
-
-    setTimeout(() => {
-      this.i--;
-      if (this.i > -2) {
+    // reverse direction 
+    // setTimeout(() => {
+    //   this.i--;
+    //   if (this.i > -2) {
         
-        console.log(this.i)
-        if (this.i < 0) {
-          return;
-        }
+    //     console.log(this.i)
+    //     if (this.i < 0) {
+    //       return;
+    //     }
+    //     this.setState((state) => ({
+    //       spans: this.state.spans.map((item, index) => {
+    //         if (index !== this.i) {
+    //           return this.state.spans[index]
+    //         } else {
+    //           return (<span className={this.i}>{this.split[this.i]}</span>)
+    //         }
+              
+            
+    //       })
+    //     }))
+    //     this.handleLeave();
+    //   } 
+    // }, 60)
+
+    // same direction
+    setTimeout(() => {
+
+      if (this.i < this.state.spans.length) {
+        console.log(this.state.spans[this.i])
+
+        this.i++;
         this.setState((state) => ({
           spans: this.state.spans.map((item, index) => {
             if (index !== this.i) {
               return this.state.spans[index]
             } else {
-              return (<span className={this.i}>{this.split[this.i]}</span>)
+              return (<span className={index}>{this.split[index]}</span>)
             }
-              
-            
           })
         }))
         this.handleLeave();
-      } 
-    }, 60)
-
+      }
+    }, 30) 
+  }
+  handleLeaveReverse = () => {
+    this.reset();
+    this.handleLeave();
+  }
+  reset = () => {
+    this.i = -1;
   }
 
 
@@ -93,8 +123,8 @@ class BadassButton extends Component {
         <button
           className={this.classCaller(this.props.level)} 
           disabled={this.props.disabled}
-          onMouseEnter={this.handleHover}
-          onMouseLeave={this.handleLeave}
+          onMouseEnter={this.handleHoverReverse}
+          onMouseLeave={this.handleLeaveReverse}
           >
             {this.state.spans}
           </button>
