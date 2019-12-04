@@ -22,10 +22,15 @@ export const secondary = () => (
 
 storiesOf('Badass Button', module)
     .add(
-        'basic',
+        'Animated Hover',
         () => (
-            badass()
-        )
+            <BadassButton txt="dsm button"></BadassButton>
+        ),
+        {
+            'in-dsm': {
+                id: '5dc45ba8968fb6328dc2f712'
+            }
+        }
     )
     .add(
         'disabled',

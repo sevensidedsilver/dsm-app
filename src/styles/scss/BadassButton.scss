@@ -43,8 +43,39 @@
 .wide {
     letter-spacing: 3px;
     font-size: 1.2em;
-    transition: all ease .4s;
+    transition: all cubic-bezier(0.08, -0.07, 1, 2.45) .4s;
+
     color: #484848;
     text-shadow: rgba(0, 0, 0, 0.55) 2px 3px 6px;
     background: transparent;
 }
+
+    @keyframes spin { 
+        from { 
+            transform: rotateZ(0deg); 
+        } to { 
+            transform: rotateZ(90deg); 
+        }
+    }
+
+       @-ms-keyframes spin { 
+        from { 
+            -ms-transform: rotate(0deg); 
+        } to { 
+            -ms-transform: rotate(360deg); 
+        }
+    }
+    @-moz-keyframes spin { 
+        from { 
+            -moz-transform: rotate(0deg); 
+        } to { 
+            -moz-transform: rotate(360deg); 
+        }
+    }
+    @-webkit-keyframes spin { 
+        from { 
+            -webkit-transform: rotate(0deg); 
+        } to { 
+            -webkit-transform: rotate(360deg); 
+        }
+    }
